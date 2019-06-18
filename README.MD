@@ -13,9 +13,9 @@ g++ -std=c++17 matrix.cpp
 - [x] Constructor
 - [x] set
 - [x] ()operator
-- [ ] - scalar (doesnt work fine)
-- [ ] - Matrix (doesnt work fine)
-- [x] - Matrix
-- [x] - Matrix
+- [ ] operator* scalar (doesnt work fine)
+- [ ] operator* Matrix (doesnt work fine)
+- [x] operator+ Matrix
+- [x] operator- Matrix
 - [x] Transpose
 - [ ] print()(doesnt work fine)
