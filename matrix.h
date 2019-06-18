@@ -113,7 +113,7 @@ public:
 
         if (this->columns == other.rows)
         {
-            Matrix<int> resultado(rows, other.columns);
+            Matrix<int> result(rows, other.columns);
 
             for (int i = 0; i < rows; ++i)
             {
@@ -128,11 +128,11 @@ public:
                     }
                     if (temp)
                     {
-                        resultado.set(i, j, temp);
+                        result.set(i, j, temp);
                     }
                 }
             }
-            return resultado;
+            return result;
         }
         else
         {
@@ -143,18 +143,18 @@ public:
     Matrix<T> operator*(T scalar)
     {
 
-        Matrix<int> resultado(rows, columns);
+        Matrix<int> result(rows, columns);
         for (int i = 0; i < rows; ++i)
         {
             for (int j = 0; j < columns; ++j)
             {
                 if ((*this)(i, j))
                 {
-                    resultado.set(i, j, (((*this)(i, j) * scalar)));
+                    result.set(i, j, (((*this)(i, j) * scalar)));
                 }
             }
         }
-        return resultado;
+        return result;
     }
 
     Matrix<T> operator+(Matrix<T> other)
@@ -162,7 +162,7 @@ public:
 
         if (this->columns == other.columns && this->rows == other.rows)
         {
-            Matrix<int> resultado(rows, columns);
+            Matrix<int> result(rows, columns);
 
             for (int i = 0; i < rows; ++i)
             {
@@ -170,11 +170,11 @@ public:
                 {
                     if ((*this)(i, j) + (other)(i, j))
                     {
-                        resultado.set(i, j, ((*this)(i, j) + (other)(i, j)));
+                        result.set(i, j, ((*this)(i, j) + (other)(i, j)));
                     }
                 }
             }
-            return resultado;
+            return result;
         }
         else
         {
@@ -187,7 +187,7 @@ public:
 
         if (this->columns == other.columns && this->rows == other.rows)
         {
-            Matrix<int> resultado(rows, columns);
+            Matrix<int> result(rows, columns);
 
             for (int i = 0; i < rows; ++i)
             {
@@ -195,11 +195,11 @@ public:
                 {
                     if ((*this)(i, j) - (other)(i, j))
                     {
-                        resultado.set(i, j, ((*this)(i, j) - (other)(i, j)));
+                        result.set(i, j, ((*this)(i, j) - (other)(i, j)));
                     }
                 }
             }
-            return resultado;
+            return result;
         }
         else
         {
@@ -209,7 +209,7 @@ public:
 
     Matrix<T> transpose()
     {
-        Matrix<int> resultado(columns, rows);
+        Matrix<int> result(columns, rows);
 
         for (int i = 0; i < rows; ++i)
         {
@@ -217,11 +217,11 @@ public:
             {
                 if ((*this)(i, j))
                 {
-                    resultado.set(j, i, (*this)(i, j));
+                    result.set(j, i, (*this)(i, j));
                 }
             }
         }
-        return resultado;
+        return result;
     }
 
     void print()
