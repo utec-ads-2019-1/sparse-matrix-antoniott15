@@ -238,7 +238,7 @@ public:
 
     //~Matrix();
 };
-/* 
+
 int main()
 {
 
@@ -266,24 +266,33 @@ int main()
     matrixB.set(2, 3, 5);
     matrixB.set(1, 4, 5);
     matrixB.set(4, 1, 5);
-    matrixB.set(3, 2, 5);
+    matrixB.set(3, 2, 3);
     matrixB.set(3, 3, 5);
-    matrixB.set(3, 4, 5);
+    matrixB.set(3, 4, 2);
     matrixB.set(2, 4, 5);
     matrixB.set(0, 1, 4);
-    matrixB.set(0, 1, 7);
+    matrixB.set(0, 1, 10);
 
     matrixA.print();
     cout << "====================" << endl;
     auto j = matrixA * 3;
     j.print();
     cout << "====================" << endl;
-    auto trans = matrixA.transpose();
-    trans.print();
+
     cout << "====================" << endl;
 
     (matrixA * matrixB).print();
+    cout << "====================" << endl;
 
+    (matrixA + matrixB).print();
+
+    cout << "====================" << endl;
+
+    matrixA.transpose();
+    cout << "====================" << endl;
+
+    (matrixA - matrixB).print();
+
+    cout << "====================" << endl;
     return 0;
 }
-*/
