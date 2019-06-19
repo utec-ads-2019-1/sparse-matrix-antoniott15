@@ -52,33 +52,33 @@ public:
         }
         else
         {
-            Node<T> *Rtemp = this->x;
+            Node<T> *tempRows = this->x;
             for (int i = 0; i < posX; ++i)
             {
-                Rtemp = Rtemp->down;
+                tempRows = tempRows->down;
             }
-            if (Rtemp->next)
+            if (tempRows->next)
             {
-                while ((Rtemp->next->positionX < posX) && Rtemp->next)
+                while ((tempRows->next->positionX < posX) && tempRows->next)
                 {
-                    Rtemp = Rtemp->next;
+                    tempRows = tempRows->next;
                 }
             }
-            Node<T> *Ctemp = this->y;
+            Node<T> *tempColumns = this->y;
             for (int i = 0; i < posY; ++i)
             {
-                Ctemp = Ctemp->next;
+                tempColumns = tempColumns->next;
             }
-            if (Ctemp->down)
+            if (tempColumns->down)
             {
-                while ((Ctemp->down->positionY < posY) && Ctemp->down)
+                while ((tempColumns->down->positionY < posY) && tempColumns->down)
                 {
-                    Ctemp = Ctemp->down;
+                    tempColumns = tempColumns->down;
                 }
             }
-            Node<T> *tempSet = new Node<T>(Rtemp->next, Ctemp->down, posX, posY, data);
-            Rtemp->next = tempSet;
-            Ctemp->down = tempSet;
+            Node<T> *tempSet = new Node<T>(tempRows->next, tempColumns->down, posX, posY, data);
+            tempRows->next = tempSet;
+            tempColumns->down = tempSet;
         }
     }
 
