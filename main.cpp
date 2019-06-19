@@ -2,8 +2,8 @@
 
 #include "tester/tester.h"
 
-int main() {
+int main()
+{
     Tester::execute();
     return EXIT_SUCCESS;
 }
-
