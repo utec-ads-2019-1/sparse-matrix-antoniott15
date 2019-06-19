@@ -43,7 +43,7 @@ public:
         }
     }
 
-    void set(int posX, int posY, T data)
+    void set(int posX, int posY, T data) const
     {
 
         if (posX >= rows || posY >= columns)
