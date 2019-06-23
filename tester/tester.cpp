@@ -49,6 +49,8 @@ void Tester::testMatrix(unsigned int rows, unsigned int columns)
             ASSERT(result(i, j) == matrix1[i][j] - matrix2[i][j], "There is a problem with the subtraction");
         }
     }
+
+    cout << "FINISHED" << endl;
 }
 
 template <typename T>

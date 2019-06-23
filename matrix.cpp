@@ -43,6 +43,7 @@ public:
         }
     }
 
+    // Falta el caso de eliminar 0
     void set(int posX, int posY, T data) const
     {
 
@@ -107,6 +108,7 @@ public:
         }
     }
 
+    // Las operaciones se pueden optimizar mucho al reemplazar el uso de () y set
     Matrix<T> operator*(Matrix<T> other)
     {
 
@@ -236,9 +238,10 @@ public:
         }
     }
 
+    // Faltó destructor
     //~Matrix();
 };
-
+/*
 int main()
 {
 
@@ -296,3 +299,4 @@ int main()
     cout << "====================" << endl;
     return 0;
 }
+*/

@@ -8,7 +8,7 @@
 #include <algorithm>
 
 #include "../mocker/mocker.h"
-#include "../matrix.h"
+#include "../matrix.cpp"
 
 using namespace std;
 
